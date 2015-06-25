@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql2
+  username: <%= ENV['DB_USERNAME'] %>
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: fagus
+
+test:
+  <<: *default
+  database: fagus_test
+
+production:
+  <<: *default
+  database: fagus
