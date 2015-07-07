@@ -1,0 +1,8 @@
+D, [2015-07-02T15:45:47.888437 #86981] DEBUG -- :   [1m[36m (54.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+D, [2015-07-02T15:45:47.932170 #86981] DEBUG -- :   [1m[35m (42.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+D, [2015-07-02T15:45:47.933163 #86981] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-07-02T15:45:47.936074 #86981]  INFO -- : Migrating to CreateFagusCategories (20150701210635)
+D, [2015-07-02T15:45:47.961028 #86981] DEBUG -- :   [1m[35m (23.6ms)[0m  CREATE TABLE `fagus_categories` (`id` int(11) auto_increment PRIMARY KEY, `description` varchar(255) NOT NULL, `is_active` int(11) DEFAULT 1 NOT NULL, `name` varchar(255) NOT NULL, `reference` varchar(255) NOT NULL, `uuid` varchar(32) NOT NULL, `deleted_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-07-02T15:45:47.963768 #86981] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-07-02T15:45:47.966489 #86981] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150701210635')
+D, [2015-07-02T15:45:47.966988 #86981] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m

@@ -1,0 +1,29 @@
+<%= flash_messages %>
+
+<h2>Category</h2>
+
+<p>
+  <%= link_to 'Return to categories', categories_path %>
+  <%= link_to 'Edit', edit_category_path(@category) %>
+</p>
+
+<div>
+  <label>Name</label>
+  <%= @category.name %>
+</div>
+<div>
+  <label>Description</label>
+  <%= @category.description %>
+</div>
+<div>
+  <label>Reference</label>
+  <%= @category.reference %>
+</div>
+<div>
+  <label>Active?</label>
+  <%= @category.active? %>
+</div>
+<div>
+  <label>UUID</label>
+  <%= @category.uuid %>
+</div>

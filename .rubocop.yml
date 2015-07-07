@@ -18,6 +18,7 @@ AllCops:
   Exclude:
   - bin/*
   - spec/dummy/bin/*
+  - spec/dummy/db/schema.rb
   RunRailsCops: false
   DisplayCopNames: false
   StyleGuideCopsOnly: false
@@ -265,7 +266,7 @@ Style/MethodName:
 Style/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
   Enabled: true
-  EnforcedStyle: aligned
+  EnforcedStyle: indented
   SupportedStyles:
   - aligned
   - indented

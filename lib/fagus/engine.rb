@@ -1,3 +1,6 @@
+require 'ransack'
+require 'uuid'
+
 module Fagus
   class Engine < ::Rails::Engine
     isolate_namespace Fagus

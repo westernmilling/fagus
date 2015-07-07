@@ -1,0 +1,33 @@
+<h2>Categories</h2>
+
+<p>
+  <%= link_to 'New', new_category_path %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Reference</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= category.reference %></td>
+      <td>
+        <nav>
+          <%= link_to 'Edit', edit_category_path(category) %>
+          <%= link_to 'View', category_path(category) %>
+        </nav>
+      </td>
+    </tr>
+    <% end.empty? %>
+    <tr>
+      <td colspan="2">No categories found</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
