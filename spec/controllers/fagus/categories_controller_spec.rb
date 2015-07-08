@@ -57,7 +57,9 @@ module Fagus
       before do
         allow(category).to receive(:update_attributes) { update? }
 
-        patch :update, :id => category.id, :category => attributes_for(:category)
+        patch :update,
+              :id => category.id,
+              :category => attributes_for(:category)
       end
       let(:update?) { fail 'update? not set' }
 

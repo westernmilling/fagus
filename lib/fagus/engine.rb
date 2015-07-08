@@ -1,3 +1,4 @@
+require 'enumerize'
 require 'ransack'
 require 'uuid'
 
