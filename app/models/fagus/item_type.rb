@@ -1,16 +1,19 @@
 # Fagus
 module Fagus
-  # Represents a category of an item.
-  class Category < ActiveRecord::Base
+  # Represents the different types of items.
+  class ItemType < ActiveRecord::Base
     after_initialize :ensure_uuid_present
 
     has_many :items
 
     validates \
       :description,
-      :name,
-      :reference,
-      :uuid, :presence => true
+      :uuid,
+      :presence => true
+    validates \
+      :description,
+      :uuid,
+      :uniqueness => true
 
     def active?
       is_active == 1

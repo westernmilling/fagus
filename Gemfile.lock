@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     fagus (0.0.1)
+      enumerize
       figaro
       mysql2
       rails (~> 4.2.2)
@@ -58,6 +59,8 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     diff-lcs (1.2.5)
+    enumerize (0.11.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)

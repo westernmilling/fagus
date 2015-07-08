@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.license = ''
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.md']
 
+  s.add_dependency 'enumerize'
   s.add_dependency 'figaro'
   s.add_dependency 'mysql2'
   s.add_dependency 'rails', '~> 4.2.2'
