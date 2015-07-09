@@ -1,0 +1,37 @@
+<h2>Items</h2>
+
+<p>
+  <%= link_to 'New', new_item_path %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reference</th>
+      <th>Type</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @items.each do |item| %>
+    <tr>
+      <td><%= item.reference %></td>
+      <td><%= item.item_type.description %></td>
+      <td><%= item.category.description %></td>
+      <td><%= item.description %></td>
+      <td>
+        <nav>
+          <%= link_to 'Edit', edit_item_path(item) %>
+          <%= link_to 'View', item_path(item) %>
+        </nav>
+      </td>
+    </tr>
+    <% end.empty? %>
+    <tr>
+      <td colspan="2">No items found</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

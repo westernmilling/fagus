@@ -1,0 +1,31 @@
+<h2>Item</h2>
+
+<p>
+  <%= link_to 'Return to item types', items_path %>
+  <%= link_to 'Edit', edit_item_path(@item) %>
+</p>
+
+<div>
+  <label>Reference</label>
+  <%= @item.reference %>
+</div>
+<div>
+  <label>Description</label>
+  <%= @item.description %>
+</div>
+<div>
+  <label>Item Type</label>
+  <%= @item.item_type.description %>
+</div>
+<div>
+  <label>Category</label>
+  <%= @item.category.description %>
+</div>
+<div>
+  <label>Status</label>
+  <%= @item.status %>
+</div>
+<div>
+  <label>UUID</label>
+  <%= @item.uuid %>
+</div>
