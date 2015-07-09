@@ -1,0 +1,33 @@
+<h2>Item Types</h2>
+
+<p>
+  <%= link_to 'New', new_item_type_path %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Active</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @item_types.each do |item_type| %>
+    <tr>
+      <td><%= item_type.description %></td>
+      <td><%= item_type.active? %></td>
+      <td>
+        <nav>
+          <%= link_to 'Edit', edit_item_type_path(item_type) %>
+          <%= link_to 'View', item_type_path(item_type) %>
+        </nav>
+      </td>
+    </tr>
+    <% end.empty? %>
+    <tr>
+      <td colspan="2">No item types found</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

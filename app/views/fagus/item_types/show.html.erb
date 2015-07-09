@@ -1,0 +1,19 @@
+<h2>Item Type</h2>
+
+<p>
+  <%= link_to 'Return to item types', item_types_path %>
+  <%= link_to 'Edit', edit_item_type_path(@item_type) %>
+</p>
+
+<div>
+  <label>Description</label>
+  <%= @item_type.description %>
+</div>
+<div>
+  <label>Active?</label>
+  <%= @item_type.active? %>
+</div>
+<div>
+  <label>UUID</label>
+  <%= @item_type.uuid %>
+</div>
