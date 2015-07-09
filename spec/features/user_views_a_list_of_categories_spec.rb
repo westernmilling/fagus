@@ -10,11 +10,8 @@ feature 'User views a list of categories' do
   end
 
   context 'when there are categories' do
-    let!(:categories) do
-      [
-        create(:category), create(:category)
-      ]
-    end
+    let!(:categories) { create_list(:category, 2) }
+
     scenario 'the user sees a list of categories' do
       visit categories_path
 

@@ -45,7 +45,7 @@ module Fagus
     def category_params
       params
         .require(:category)
-        .permit(:category_type, :description, :name, :reference)
+        .permit(:category_type, :description, :is_active, :name, :reference)
     rescue ActionController::ParameterMissing; {}
     end
 

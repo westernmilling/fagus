@@ -7,3 +7,10 @@ en:
       update:
         success: 'Category was successfully updated.'
         failure: 'Category was not updated.'
+    item_type:
+      create:
+        success: 'Item type was successfully created.'
+        failure: 'Item type was not created.'
+      update:
+        success: 'Item type was successfully updated.'
+        failure: 'Item type was not updated.'

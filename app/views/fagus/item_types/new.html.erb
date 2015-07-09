@@ -1,0 +1,22 @@
+<h2>New Item Type</h2>
+
+<p>
+  <%= link_to 'Return to item types', item_types_path %>
+</p>
+
+<%= form_for(@item_type, :html => { :method => :post }) do |f| %>
+  <%= error_messages(@item_type) %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :is_active %><br />
+    <%= f.check_box :is_active %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
