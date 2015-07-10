@@ -1,17 +1,9 @@
-<%= form_for(category, :html => { :method => :post }) do |f| %>
-  <%= error_messages(category) %>
+<%= form_for(item_type, :html => { :method => :post }) do |f| %>
+  <%= error_messages(item_type) %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :reference %><br />
-    <%= f.text_field :reference %>
   </div>
   <div class="field">
     <%= f.label :is_active %><br />

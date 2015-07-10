@@ -1,0 +1,22 @@
+<%= error_messages(item) %>
+
+<div class="field">
+  <%= form.label :reference %><br />
+  <%= form.text_field :reference %>
+</div>
+<div class="field">
+  <%= form.label :description %><br />
+  <%= form.text_field :description %>
+</div>
+<div class="field">
+  <%= form.label :item_type %><br />
+  <%= form.collection_select :item_type_id, item_types, :id, :description  %>
+</div>
+<div class="field">
+  <%= form.label :category %><br />
+  <%= form.collection_select :category_id, categories, :id, :description  %>
+</div>
+<div class="field">
+  <%= form.label :status %><br />
+  <%= form.select :status, status_list %>
+</div>

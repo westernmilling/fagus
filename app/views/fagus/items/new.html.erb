@@ -1,0 +1,21 @@
+<h2>New Item</h2>
+
+<p>
+  <%= link_to 'Return to items', items_path %>
+</p>
+
+<%= form_for(@item, :html => { :method => :post }) do |f| %>
+  <%= error_messages(@item) %>
+
+  <%= render :partial => 'form',
+             :locals => {
+               :categories => @categories,
+               :form => f,
+               :item => @item,
+               :item_types => @item_types,
+               :status_list => Fagus::Item.status.values } %>
+
+  <div class="actions">
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
