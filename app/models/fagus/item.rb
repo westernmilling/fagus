@@ -10,7 +10,7 @@ module Fagus
     belongs_to :item_type
 
     enumerize :status,
-              :in => [:active, :phased_out, :discontinued],
+              :in => [:active, :discontinued, :phased_out],
               :default => :active
 
     validates \

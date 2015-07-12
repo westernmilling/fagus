@@ -1,4 +1,6 @@
 language: ruby
+addons:
+  postgresql: '9.3'
 bundler: cache
 rvm:
 - 2.2.1
@@ -8,6 +10,6 @@ script:
 before_script:
 - cp spec/dummy/config/database.example.yml config/database.yml
 - cp spec/dummy/config/database.example.yml spec/dummy/config/database.yml
-- mysql -e 'create database fagus_test;'
+- psql -c 'create database fagus_test;' -U postgres
 notifications:
   slack: wm-it:QEPmqezBb68PGS6a8OWwImYi
