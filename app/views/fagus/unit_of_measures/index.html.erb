@@ -1,0 +1,35 @@
+<h2>Unit of Measures</h2>
+
+<p>
+  <%= link_to 'New', new_unit_of_measure_path %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Unit Type</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @unit_of_measures.each do |unit_of_measure| %>
+    <tr>
+      <td><%= unit_of_measure.name %></td>
+      <td><%= unit_of_measure.symbol %></td>
+      <td><%= unit_of_measure.unit_type %></td>
+      <td>
+        <nav>
+          <%= link_to 'Edit', edit_unit_of_measure_path(unit_of_measure) %>
+          <%= link_to 'View', unit_of_measure_path(unit_of_measure) %>
+        </nav>
+      </td>
+    </tr>
+    <% end.empty? %>
+    <tr>
+      <td colspan="2">No unit of measures found</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

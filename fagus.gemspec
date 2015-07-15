@@ -16,11 +16,13 @@ Gem::Specification.new do |s|
   s.add_dependency 'enumerize'
   s.add_dependency 'figaro'
   s.add_dependency 'mysql2'
+  s.add_dependency 'pg'
   s.add_dependency 'rails', '~> 4.2.2'
   s.add_dependency 'ransack'
   s.add_dependency 'uuid'
 
   s.add_development_dependency 'capybara'
+  s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_girl_rails'
   s.add_development_dependency 'faker'
   s.add_development_dependency 'rspec-its'

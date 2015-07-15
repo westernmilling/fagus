@@ -8,6 +8,8 @@ feature 'User creates new item' do
     scenario 'the user sees a success message' do
       visit new_item_path
 
+      expect(page).to have_content(/new item/i)
+
       select item_type.description, :from => :item_item_type_id
       select category.description, :from => :item_category_id
       select 'active', :from => :item_status
